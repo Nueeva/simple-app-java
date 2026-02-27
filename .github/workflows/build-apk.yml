@@ -27,7 +27,9 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: 'gradle'
-          cache-dependency-path: android-app/*.gradle
+          cache-dependency-path: |
+            android-app/**/*.gradle*
+            android-app/**/gradle-wrapper.properties
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
