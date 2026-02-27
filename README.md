@@ -23,3 +23,14 @@ The debug APK is output to `android-app/app/build/outputs/apk/debug/app-debug.ap
 ## CI / CD
 
 A GitHub Actions workflow builds the debug APK on every push and pull request to `main` and uploads it as a downloadable artifact.
+
+### Creating a Release
+
+To publish the APK to GitHub Releases, push a version tag:
+
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+This triggers the workflow to build the APK and create a GitHub Release with the APK attached. You can then download the APK directly from the [Releases](https://github.com/Nueeva/simple-app-java/releases) page.
