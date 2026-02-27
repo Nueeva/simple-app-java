@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+    <!-- App Title -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_title"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="60dp" />
+
+    <!-- Counter Display -->
+    <TextView
+        android:id="@+id/tv_counter"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:text="0"
+        android:textSize="64sp"
+        android:textStyle="bold"
+        android:textColor="@color/counter_zero"
+        android:gravity="center"
+        android:background="@drawable/counter_background"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp" />
+
+    <!-- Increment Button -->
+    <Button
+        android:id="@+id/btn_increment"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:text="@string/btn_increment"
+        android:textSize="18sp"
+        android:backgroundTint="@color/button_increment"
+        app:layout_constraintTop_toBottomOf="@id/tv_counter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp" />
+
+    <!-- Decrement Button -->
+    <Button
+        android:id="@+id/btn_decrement"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:text="@string/btn_decrement"
+        android:textSize="18sp"
+        android:backgroundTint="@color/button_decrement"
+        app:layout_constraintTop_toBottomOf="@id/btn_increment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp" />
+
+    <!-- Reset Button -->
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:text="@string/btn_reset"
+        android:textSize="18sp"
+        android:backgroundTint="@color/button_reset"
+        app:layout_constraintTop_toBottomOf="@id/btn_decrement"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
